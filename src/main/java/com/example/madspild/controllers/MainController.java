@@ -4,6 +4,7 @@ import com.example.madspild.repository.Recipes;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 
 @Controller
 public class MainController {
@@ -24,6 +25,11 @@ public class MainController {
     @GetMapping("/omMadspild")
     public String about(){
         return "LandingPageAbout";
+    }
+
+    @GetMapping("/minMadplan")
+    public String mealPlan(){
+        return "mealPlan";
     }
 
     @GetMapping("/opskrifter/{name}")
