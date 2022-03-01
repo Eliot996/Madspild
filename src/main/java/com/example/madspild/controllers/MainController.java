@@ -25,4 +25,10 @@ public class MainController {
     public String about(){
         return "LandingPageAbout";
     }
+
+    @GetMapping("/opskrifter/{name}")
+    public String allRecipes(Model model, @PathVariable() String name) {
+        model.addAttribute("recipe", RECIPES.getRecipe(name));
+        return "Recipe";
+    }
 }
