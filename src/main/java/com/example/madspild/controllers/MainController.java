@@ -22,6 +22,13 @@ public class MainController {
         return "Recipes";
     }
 
+    @GetMapping("/opskrifter/{name}")
+    public String allRecipes(Model model, @PathVariable() String name) {
+        model.addAttribute("recipe", RECIPES.getRecipe(name));
+        model.addAttribute("ingredients", RECIPES.getRecipe(name).getIngredients());
+        return "Recipe";
+    }
+
     @GetMapping("/omMadspild")
     public String about(){
         return "LandingPageAbout";
@@ -32,9 +39,5 @@ public class MainController {
         return "mealPlan";
     }
 
-    @GetMapping("/opskrifter/{name}")
-    public String allRecipes(Model model, @PathVariable() String name) {
-        model.addAttribute("recipe", RECIPES.getRecipe(name));
-        return "Recipe";
-    }
+
 }

@@ -9,7 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="GeneralStyle.css">
 
-    <title></title>
+    <title th:text="${recipe.name}"></title>
 </head>
 <body>
 <div class="container">
@@ -39,13 +39,34 @@
         </div>
     </header>
 
-    <div th:text="${recipe.name}">
-
+    <div id="recipe-name" class="row" style="background-color: red">
+        <div th:text="${recipe.name}"></div>
+    </div>
+    <div id="recipe-description" class="row" style="background-color: green">
+        <div th:text="${recipe.description}"></div>
     </div>
 
-    <div th:text="${recipe.description}">
+    <div id="recipe-ingredients" class="row" style="background-color: blue">
+        <!--
+        <div th:each=" ingredient : ${ingredients}"></div>
+        <div th:text="${ingredient.name}"></div>
+        -->
 
+        <table>
+            <tbody>
+            <tr th:if="${ingredients.empty}">
+                <td colspan="2"> No MovieFacts Available </td>
+            </tr>
+            <tr th:each="indgredient : ${ingredients}">
+                <td><span th:text="${indgredient.name}"> Year </span></td>
+                <td><span th:text="${indgredient.amount}"> Length </span></td>
+                <td><span th:text="${indgredient.type}"> Title</span></td>
+            </tr>
+            </tbody>
+        </table>
     </div>
+
+
 
 
 </div>
