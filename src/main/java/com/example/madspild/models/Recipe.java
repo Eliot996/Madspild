@@ -1,19 +1,20 @@
 package com.example.madspild.models;
 
-import java.util.HashMap;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Recipe {
     private String name;
     private String description;
-    private HashMap<String,Double> ingredients = new HashMap<>();
+    private ArrayList<Ingredient> ingredients = new ArrayList<>();
 
     public Recipe(String name, String description) {
         this.name = name;
         this.description = description;
     }
 
-    public void addIngredient(String ingredient, double amount) {
-        ingredients.put(ingredient, amount);
+    public void addIngredient(Ingredient ingredient) {
+        ingredients.add(ingredient);
     }
 
     public String getName() {
@@ -32,11 +33,7 @@ public class Recipe {
         this.description = description;
     }
 
-    public HashMap<String, Double> getIngredients() {
+    public List<Ingredient> getIngredients() {
         return ingredients;
-    }
-
-    public void setIngredients(HashMap<String, Double> ingredients) {
-        this.ingredients = ingredients;
     }
 }

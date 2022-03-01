@@ -1,5 +1,6 @@
 package com.example.madspild.repository;
 
+import com.example.madspild.models.Ingredient;
 import com.example.madspild.models.Recipe;
 
 import java.util.ArrayList;
@@ -14,10 +15,10 @@ public class Recipes {
             RECIPES.add(new Recipe("name" + i, "This is a description of a recipe"));
         }
 
-        RECIPES.get(0).addIngredient("butter", 400);
-        RECIPES.get(0).addIngredient("sugar", 400);
-        RECIPES.get(0).addIngredient("flour", 400);
-        RECIPES.get(0).addIngredient("baking powder", 2);
+        RECIPES.get(0).addIngredient(new Ingredient("butter", 400, "gram"));
+        RECIPES.get(0).addIngredient(new Ingredient("sugar", 400, "gram"));
+        RECIPES.get(0).addIngredient(new Ingredient("flour", 400, "gram"));
+        RECIPES.get(0).addIngredient(new Ingredient("baking powder", 1, "teske"));
     }
 
     public List<Recipe> getAllRecipes() {
