@@ -1,0 +1,16 @@
+.card-class {
+    width: 100%;
+    background-color: #6D9775;
+}
+
+.custom-button:hover {
+    background-color: #A67B5C;
+
+}
+
+.custom-button {
+    background-color: #C8B282;
+
+    color: black;
+    width: 100%;
+}
