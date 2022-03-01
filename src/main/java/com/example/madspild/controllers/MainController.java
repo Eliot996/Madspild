@@ -20,4 +20,9 @@ public class MainController {
         model.addAttribute("recipes", RECIPES.getAllRecipes());
         return "Recipes";
     }
+
+    @GetMapping("/omMadspild")
+    public String about(){
+        return "LandingPageAbout";
+    }
 }
