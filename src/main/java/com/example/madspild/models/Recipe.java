@@ -7,10 +7,13 @@ public class Recipe {
     private String description;
     private HashMap<String,Double> ingredients = new HashMap<>();
 
-    public Recipe(String name, String description, HashMap<String, Double> ingredients) {
+    public Recipe(String name, String description) {
         this.name = name;
         this.description = description;
-        this.ingredients = ingredients;
+    }
+
+    public void addIngredient(String ingredient, double amount) {
+        ingredients.put(ingredient, amount);
     }
 
     public String getName() {
