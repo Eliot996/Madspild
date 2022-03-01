@@ -7,18 +7,21 @@ p{
     margin: 0;
 }
 
-.customButton {
-    background-color: darkgreen;
-    color: white;
-    margin-bottom: 5px;
-    width: 100%;
-}
+
 
 #headerStyler {
     width: 100%;
     height: 110%;
-    background-color: lightgreen;
+    background-color: #007f5c;
+
 }
+
+.customButton {
+    background-color: mediumspringgreen;
+    color: white;
+    width: 100%;
+}
+
 
 #siteOverskrift {
     margin: auto;
