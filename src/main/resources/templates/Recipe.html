@@ -14,43 +14,52 @@
     <title th:text="${recipe.name}"></title>
 </head>
 <body>
-<div class="container-fluid">
-    <header class="row m-0" id="headerStyler">
-        <div class="col-12">
-            <div id="siteOverskrift">
-                <h1 >Madspild DK</h1>
-            </div>
-        </div>
-
-        <div class="col-1"></div>
-        <div class="col-10">
-            <div class="row">
-                <div class="col-sm-4">
-                    <a href="/minMadplan">
-                        <button type="button" class="btn customButton mb-2">
-                            <p>Min Madplan</p>
-                        </button>
-                    </a>
-                </div>
-                <div class="col-sm-4">
-                    <a href="/opskrifter">
-                        <button type="button" class="btn customButton mb-2">
-                            <p>Opskrifter</p>
-                        </button>
-                    </a>
-                </div>
-                <div class="col-sm-4">
-                    <a href="/omMadspild">
-                        <button type="button" class="btn customButton mb-2">
-                            <p>Om madspild</p>
-                        </button>
-                    </a>
+<div class="container-fluid p-0">
+    <div class="container">
+        <div class="pt-3"></div>
+        <header class="row m-0 " id="headerStyler">
+            <div class="col-12">
+                <div id="siteOverskrift">
+                    <h1 >
+                        <a href="/" id="anti-a-tag">
+                            Madspild DK
+                        </a>
+                    </h1>
                 </div>
             </div>
-        </div>
-        <div class="col-1"></div>
 
-    </header>
+            <div class="col-1"></div>
+            <div class="col-10">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <a href="/minMadplan">
+                            <button type="button" class="btn customButton mb-2">
+                                <p>Min Madplan</p>
+                            </button>
+                        </a>
+                    </div>
+                    <div class="col-sm-4">
+                        <a href="/opskrifter">
+                            <button type="button" class="btn customButton mb-2">
+                                <p>Opskrifter</p>
+                            </button>
+                        </a>
+                    </div>
+                    <div class="col-sm-4">
+                        <a href="/omMadspild">
+                            <button type="button" class="btn customButton mb-2">
+                                <p>Om madspild</p>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-1"></div>
+
+        </header>
+    </div>
+
+    <main class="container">
 
     <div id="recipe-name" class="col-10 container" style="background-color: red">
         <h1>
@@ -71,10 +80,11 @@
             <tr th:each="indgredient : ${ingredients}">
                 <td><span th:text="${indgredient.name}"> Name </span></td>
                 <td><span th:text="${indgredient.amount}"> Amount  </span> <span th:text="${indgredient.type}"> Type</span></td>
-                <td></td>
             </tr>
             </tbody>
         </table>
+
+    </main>
 
     </div>
 
