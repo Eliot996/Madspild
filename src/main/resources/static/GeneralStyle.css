@@ -7,6 +7,15 @@ p{
     margin: 0;
 }
 
+a {
+    color: white; !important;/* blue colors for links too */
+    text-decoration: none !important; /* no underline */
+}
+
+a:hover {
+    color: white;
+}
+
 .container-fluid {
     background-color: #D0C59A;
 
@@ -17,6 +26,7 @@ p{
     height: 110%;
     background-color: #417154;
     color: white;
+    border-radius: 5px;
 }
 
 .customButton {
@@ -28,6 +38,15 @@ p{
 #siteOverskrift {
     margin: auto;
     text-align: center;
+    color: white;
+}
+
+.content {
+    margin-top: 0.5%;
+    margin-bottom: 0.5%;
+    padding: 1%;
+    border-radius: 5px;
+    background: #ffebbc;
 }
 
 .pt-4{
