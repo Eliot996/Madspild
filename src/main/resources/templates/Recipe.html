@@ -61,18 +61,22 @@
 
     <main class="container">
 
-    <div id="recipe-name" class="col-10 container" style="background-color: red">
+    <div id="recipe-name" class="col-10 container content">
         <h1>
             <span th:text="${recipe.name}"></span>
         </h1>
     </div>
-    <div id="recipe-description" class="col-10 container" style="background-color: green">
+    <div id="recipe-description" class="col-10 container content">
         <div th:utext="${recipe.description}"></div>
     </div>
 
-    <div id="recipe-ingredients" class="col-10 container" style="background-color: blue">
+    <div id="recipe-ingredients" class="col-10 container content">
 
-        <table>
+        <h2>
+           Ingredienser
+        </h2>
+
+        <table class="table table-striped">
             <tbody>
             <tr th:if="${ingredients.empty}">
                 <td colspan="2"> No recipes found </td>
