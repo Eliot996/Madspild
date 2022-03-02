@@ -12,7 +12,20 @@ public class Recipes {
 
     public Recipes() {
         for (int i = 0; i < 100; i++) {
-            RECIPES.add(new Recipe("name" + i, "This is a description of a recipe"));
+            RECIPES.add(new Recipe("name" + i, "Pandekagedej:\n" +
+                    "Æg og mel piskes sammen. Heri piskes det varme smeltede smør, spæd med mælk og smages til med salt, sukker og vanille.\n" +
+                    "\n" +
+                    "Bag pandekagerne lysebrune i smør på panden. Der bliver 8-12 pandekager alt efter pandens størrelse. 12 stk. med pande på 19 cm. i diameter.\n" +
+                    "\n" +
+                    "Server pandekagerne med, sukker og syltetøj, blød vanilleis eller flødeskum.\n" +
+                    "\n" +
+                    "Tips:\n" +
+                    "\n" +
+                    "Det kan være en fordel at have en pande som kun bruges til pandekager, for at undgå de hænger fast på panden.\n" +
+                    "Da du ikke i så høj grad har fastbrændte rester eller slidt pande efter høj varme.\n" +
+                    "\t"));
+
+            RECIPES.get(i).setDescription(RECIPES.get(i).getDescription().replaceAll("\n", "<br/>"));
         }
 
         RECIPES.get(0).addIngredient(new Ingredient("butter", 400, "gram"));
