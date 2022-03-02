@@ -14,6 +14,14 @@ public class Mealplan {
         this.recipes = recipes;
     }
 
+    public Mealplan(String name, int amountOfPortions) {
+        this.name = name;
+        this.amountOfPortions = amountOfPortions;
+    }
+
+    public Mealplan() {
+    }
+
     public String getName() {
         return name;
     }

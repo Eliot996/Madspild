@@ -1,10 +1,13 @@
 package com.example.madspild.controllers;
 
+import com.example.madspild.models.Mealplan;
 import com.example.madspild.repository.Recipes;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
 public class MainController {
@@ -35,8 +38,16 @@ public class MainController {
     }
 
     @GetMapping("/minMadplan")
-    public String mealPlan(){
+    public String mealPlan(Model model){
+        model.addAttribute("mealplan", new Mealplan());
         return "mealPlan";
+    }
+
+    @PostMapping("/minMadplan")
+    public String mealPlan(@ModelAttribute Mealplan mealplan, Model model){
+        Object mealplantemp = model.getAttribute("mealplan");
+        Mealplan mealplan1 = ((Mealplan) mealplantemp);
+        return "mealPlanResult";
     }
 
 
