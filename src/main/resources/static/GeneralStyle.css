@@ -7,6 +7,15 @@ p{
     margin: 0;
 }
 
+a {
+    color: white; !important;/* blue colors for links too */
+    text-decoration: none !important; /* no underline */
+}
+
+a:hover {
+    color: white;
+}
+
 .container-fluid {
     background-color: #D0C59A;
 
@@ -28,4 +37,6 @@ p{
 #siteOverskrift {
     margin: auto;
     text-align: center;
+    color: white;
+
 }
