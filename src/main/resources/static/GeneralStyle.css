@@ -26,6 +26,7 @@ a:hover {
     height: 110%;
     background-color: #417154;
     color: white;
+    border-radius: 5px;
 }
 
 .customButton {
@@ -38,5 +39,12 @@ a:hover {
     margin: auto;
     text-align: center;
     color: white;
+}
 
+.content {
+    margin-top: 0.5%;
+    margin-bottom: 0.5%;
+    padding: 1%;
+    border-radius: 5px;
+    background: #ffebbc;
 }
