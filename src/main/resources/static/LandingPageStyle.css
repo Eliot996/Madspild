@@ -1,0 +1,17 @@
+.front-page-section {
+    height: 250px;
+    background-color: red;
+}
+
+.front-page-content {
+    height: 100%;
+    width: 100%;
+    background-color: #6D9775;
+}
+
+.front-page-content-small {
+    height: 100%;
+    width: 100%;
+    background-color: blue;
+}
+
