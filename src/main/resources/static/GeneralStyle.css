@@ -29,3 +29,12 @@ p{
     margin: auto;
     text-align: center;
 }
+
+.pt-4{
+    padding-top: 60%;
+}
+
+.linkColor{
+    color: #417154;
+
+}
