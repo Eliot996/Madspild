@@ -47,15 +47,11 @@
     </div>
 
     <div id="recipe-ingredients" class="row" style="background-color: blue">
-        <!--
-        <div th:each=" ingredient : ${ingredients}"></div>
-        <div th:text="${ingredient.name}"></div>
-        -->
 
         <table>
             <tbody>
             <tr th:if="${ingredients.empty}">
-                <td colspan="2"> No MovieFacts Available </td>
+                <td colspan="2"> No recipes found </td>
             </tr>
             <tr th:each="indgredient : ${ingredients}">
                 <td><span th:text="${indgredient.name}"> Year </span></td>
@@ -64,10 +60,8 @@
             </tr>
             </tbody>
         </table>
+
     </div>
-
-
-
 
 </div>
 
