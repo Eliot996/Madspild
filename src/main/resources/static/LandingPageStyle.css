@@ -1,6 +1,6 @@
 .front-page-section {
     height: 250px;
-    background-color: red;
+
 }
 
 .front-page-content {
@@ -12,6 +12,6 @@
 .front-page-content-small {
     height: 100%;
     width: 100%;
-    background-color: blue;
+    background-color: #417154;
 }
 
