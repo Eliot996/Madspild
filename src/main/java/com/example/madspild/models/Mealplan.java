@@ -42,8 +42,8 @@ public class Mealplan {
         return recipes;
     }
 
-    public void setRecipes(ArrayList<Recipe> recipes) {
-        this.recipes = recipes;
+    public void addRecipes(Recipe recipe) {
+        recipes.add(recipe);
     }
 
 }

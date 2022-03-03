@@ -25,16 +25,22 @@ public class Recipes {
                     "\t"));
 
             RECIPES.get(i).setDescription(RECIPES.get(i).getDescription().replaceAll("\n", "<br/>"));
+
+            RECIPES.get(i).addIngredient(new Ingredient("butter", 400, "gram"));
+            RECIPES.get(i).addIngredient(new Ingredient("sugar", 400, "gram"));
+            RECIPES.get(i).addIngredient(new Ingredient("flour", 400, "gram"));
+            RECIPES.get(i).addIngredient(new Ingredient("baking powder", 1, "teske"));
         }
 
-        RECIPES.get(0).addIngredient(new Ingredient("butter", 400, "gram"));
-        RECIPES.get(0).addIngredient(new Ingredient("sugar", 400, "gram"));
-        RECIPES.get(0).addIngredient(new Ingredient("flour", 400, "gram"));
-        RECIPES.get(0).addIngredient(new Ingredient("baking powder", 1, "teske"));
+
     }
 
     public List<Recipe> getAllRecipes() {
         return RECIPES;
+    }
+
+    public Recipe getRecipe(int index) {
+        return RECIPES.get(index);
     }
 
     public Recipe getRecipe(String recipe) {
