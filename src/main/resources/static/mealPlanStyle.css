@@ -1,9 +1,9 @@
-.custom-button:hover .shopping-list-button:hover {
+.custom-button:hover, .shopping-list-button:hover {
     background-color: #A67B5C;
 
 }
 
-.custom-button .shopping-list-button{
+.custom-button, .shopping-list-button{
     background-color: #C8B282;
 
     color: black;
