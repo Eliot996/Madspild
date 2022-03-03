@@ -1,0 +1,16 @@
+.custom-button:hover .shopping-list-button:hover {
+    background-color: #A67B5C;
+
+}
+
+.custom-button .shopping-list-button{
+    background-color: #C8B282;
+
+    color: black;
+    width: 100%;
+}
+
+.table {
+    width: 75%;
+    margin: auto;
+}
