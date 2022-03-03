@@ -22,4 +22,8 @@ public class Ingredient {
     public String getType() {
         return type;
     }
+
+    public void setAmount(double amount) {
+        this.amount = amount;
+    }
 }
