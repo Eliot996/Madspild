@@ -43,6 +43,12 @@ public class MainController {
         return "mealPlans";
     }
 
+    @GetMapping("/minMadplan/{name}")
+    public String mealplan(Model model, @PathVariable() String name) {
+        model.addAttribute("mealplan", MEALPLANS.getMealplan(name));
+        return "mealPlan";
+    }
+
     /*@PostMapping("/minMadplan")
     public String mealPlan(@ModelAttribute Mealplan mealplan, Model model){
         Object mealplantemp = model.getAttribute("mealplan");
