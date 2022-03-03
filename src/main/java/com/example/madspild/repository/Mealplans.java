@@ -27,4 +27,13 @@ public class Mealplans {
     public List<Mealplan> getMealplans() {
         return mealplans;
     }
+
+    public Mealplan getMealplan(String name) {
+        for (Mealplan mp : mealplans) {
+            if (mp.getName().equals(name)) {
+                return mp;
+            }
+        }
+        return null;
+    }
 }
