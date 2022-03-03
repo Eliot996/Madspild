@@ -3,6 +3,7 @@ package com.example.madspild.controllers;
 import com.example.madspild.models.Mealplan;
 import com.example.madspild.repository.Mealplans;
 import com.example.madspild.repository.Recipes;
+import com.example.madspild.services.MealplanService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,6 +14,7 @@ public class MainController {
 
     private final Recipes RECIPES = new Recipes();
     private final Mealplans MEALPLANS = new Mealplans(RECIPES);
+    private final MealplanService MP_SERVICE = new MealplanService();
 
     @GetMapping
     public String landing() {
@@ -47,6 +49,13 @@ public class MainController {
     public String mealplan(Model model, @PathVariable() String name) {
         model.addAttribute("mealplan", MEALPLANS.getMealplan(name));
         return "mealPlan";
+    }
+
+    @GetMapping("/minIndkøbsliste/{name}")
+    public String shoppingList(Model model, @PathVariable() String name) {
+        model.addAttribute("shoppinglist", MP_SERVICE.getShoppinglist(MEALPLANS.getMealplan(name)));
+        model.addAttribute("mealplanName", MEALPLANS.getMealplan(name).getName());
+        return "mealPlanResult";
     }
 
     /*@PostMapping("/minMadplan")
