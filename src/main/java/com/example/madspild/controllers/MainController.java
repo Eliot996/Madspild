@@ -41,7 +41,7 @@ public class MainController {
     @GetMapping("/minMadplan")
     public String mealPlan(Model model){
         model.addAttribute("mealplans", MEALPLANS.getMealplans());
-        return "mealPlans";
+        return "MealPlans";
     }
 
     @GetMapping("/minMadplan/{name}")
