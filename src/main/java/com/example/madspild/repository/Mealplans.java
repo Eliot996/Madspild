@@ -13,7 +13,7 @@ public class Mealplans {
         this.recipes = recipes;
 
         for (int i = 0; i < 10; i++) {
-            mealplans.add(new Mealplan("mealplan " + i, i));
+            mealplans.add(new Mealplan("mealplan-" + i, i+1));
             mealplans.get(i).addRecipes(recipes.getRecipe(i));
             mealplans.get(i).addRecipes(recipes.getRecipe(i + 1));
             mealplans.get(i).addRecipes(recipes.getRecipe(i + 2));
