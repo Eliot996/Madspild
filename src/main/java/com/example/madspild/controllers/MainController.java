@@ -1,6 +1,5 @@
 package com.example.madspild.controllers;
 
-import com.example.madspild.models.Mealplan;
 import com.example.madspild.repository.Mealplans;
 import com.example.madspild.repository.Recipes;
 import com.example.madspild.services.MealplanService;
