@@ -10,6 +10,7 @@ public class Recipes {
 
     private final ArrayList<Recipe> RECIPES = new ArrayList<>();
 
+    // creates placeholder data
     public Recipes() {
         for (int i = 0; i < 100; i++) {
             RECIPES.add(new Recipe("name" + i, "<h3>Pandekagedej:</h3>\n" +
@@ -43,6 +44,7 @@ public class Recipes {
         return RECIPES.get(index);
     }
 
+    // returns the recipe from its name
     public Recipe getRecipe(String recipe) {
         for (Recipe r : RECIPES) {
             if (r.getName().equals(recipe)) {

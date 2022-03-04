@@ -9,6 +9,7 @@ public class Mealplans {
     private ArrayList<Mealplan> mealplans = new ArrayList<>();
     private Recipes recipes;
 
+    // constructor - takes the Recipes to bind to the class
     public Mealplans(Recipes recipes) {
         this.recipes = recipes;
 
@@ -28,6 +29,7 @@ public class Mealplans {
         return mealplans;
     }
 
+    // find a Mealplan from its name
     public Mealplan getMealplan(String name) {
         for (Mealplan mp : mealplans) {
             if (mp.getName().equals(name)) {
